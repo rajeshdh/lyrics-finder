@@ -1,10 +1,8 @@
-import playArrow from "../../images/playArrow.png";
 import user from "../../images/user.png";
 import musicNote from "../../images/music-note.png";
-import heroBackground from "../../images/hero-background.jpg";
 
 function searchSuggestion({ data, onSuggestionClick }) {
-  const { album, artist, title, preview, id } = data;
+  const { album, artist, title } = data;
   return (
     <div className="search-suggestion">
       <img src={album.cover_medium} className="image" alt="logo" />
