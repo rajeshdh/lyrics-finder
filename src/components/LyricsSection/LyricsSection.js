@@ -30,6 +30,7 @@ function LyricsSection({ selectedSong, setSelectedSong }) {
                 <button
                   type="button"
                   className="btn btn-sm"
+                  disabled={copyMessage === 'Copied'}
                   onClick={() =>
                     copyToClipboard(response.lyrics).then(
                       setCopyMessage("Copied")
