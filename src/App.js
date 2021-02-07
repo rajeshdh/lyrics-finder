@@ -11,17 +11,17 @@ function App() {
   const [input, setInput] = React.useState("");
   const [selectedSong, setSelectedSong] = React.useState({});
   let heroSectionClass =
-    input && input.length ? "hero-section small" : "hero-section large";
+    input && input.length ? "hero-section container  small" : "hero-section container large";
 
   return (
-    <div className="App">
+    <div className="container">
       <div className={heroSectionClass}>
-        <header className="App-header">Oh My Lyrics</header>
-        <div className="App-header-description">
+      <h1 className="section-heading app-header">Oh My Lyrics</h1>
+        <p className="section-description">
           Never forget the lyrics to your favorite songs again...
-        </div>
+        </p>
       </div>
-      <div className="search">
+      <div className="container">
         <SearchInput
           placeholder="Search by artist or song"
           className="search-box"

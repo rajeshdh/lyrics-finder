@@ -7,10 +7,10 @@ function SuggestionList({ input, setSelectedSong }) {
         <Fetch url={`https://api.lyrics.ovh/suggest/${input}`}>
           {data => {
             if (data && !data.data) {
-              return <h4>Loading</h4>;
+              return <h4>Loading...</h4>;
             }
             if (data && data.data && data.data.length === 0) {
-              return <h4>loading</h4>;
+              return <h4>loading...</h4>;
             }
             return data.data.map(item => (
               <SearchSuggestion

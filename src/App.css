@@ -1,14 +1,13 @@
-.App {
+body {
   background-color: #ffcc5b;
-  min-height: 100vh;
-  font-family: Poppins;
+  color: #202021;
 }
 
 .hero-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
 }
 .small {
   height: auto;
@@ -17,22 +16,8 @@
 .large {
   height: 300px;
 }
-.App-header {
-  font-style: normal;
-  font-weight: 800;
-  font-size: 70px;
-  line-height: 105px;
-
-  color: #202021;
-}
-
-.App-header-description {
-  font-style: normal;
+.app-header {
   font-weight: 600;
-  font-size: 26px;
-  line-height: 39px;
-
-  color: #202021;
 }
 
 .search {
@@ -42,8 +27,7 @@
   justify-content: center;
 }
 .search-box {
-  width: 688px;
-  height: 40px;
+  width: 100%;
   background: #ffffff;
 }
 
@@ -55,7 +39,7 @@
 }
 
 .search-suggestion {
-  width: 685px;
+  width: 100%;
   height: 80px;
   background: #fff;
   border: 1px solid;
@@ -81,30 +65,17 @@
 } */
 
 .lyrics-title {
-  width: 685px;
-  font-style: normal;
-  font-weight: 800;
+  width: 100%;
+  font-weight: 600;
   font-size: 32px;
-  line-height: 48px;
-
-  color: #000000;
 }
 
 .lyrics-description {
-  width: 685px;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 36px;
-
-  color: #000000;
+  width: 100%;
+  font-size: 20px;
 }
 
 .artist {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 19px;
-  line-height: 33px;
   color: #000000;
 }
 
@@ -116,22 +87,13 @@
 .btn {
   background: #202021;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  font-style: normal;
-  font-weight: 600;
-  font-size: 24px;
   color: #ffffff;
-  margin: 10px;
-  height: 50px;
-
-}
-.btn-sm {
-  width: 160px;
 }
 
-.btn-lg {
-  width: 200px;
-}
 
+.item {
+  align-self: center;
+}
 
 .lyrics-section {
   display: flex;
@@ -140,8 +102,8 @@
   justify-content: center;
 }
 .app-icon {
-  width: 25px;
-  height: 25px;
+  width: 15px;
+  height: 15px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 .app-icon-button {
@@ -149,4 +111,33 @@
   height: 50px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   margin: 10px;
+}
+
+.section-heading,
+.section-description {
+  margin-bottom: 1.2rem;
+}
+
+.value-description {
+  opacity: .8;
+  font-weight: 300;
+  margin:0 auto;
+}
+
+/* Bigger than 550 */
+@media (min-width: 550px) {
+  .app-icon {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+/* Bigger than 750 */
+@media (min-width: 750px) {
+  .section-description {
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
 }

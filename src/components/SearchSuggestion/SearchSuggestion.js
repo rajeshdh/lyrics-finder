@@ -7,15 +7,15 @@ function searchSuggestion({ data, onSuggestionClick }) {
     <div className="search-suggestion">
       <img src={album.cover_medium} className="image" alt="logo" />
 
-      <div className="artist-song">
-        <div className="artist">
+      <div className="artist-song item">
+        <p className="value-description">
           <img src={user} className="app-icon" alt="logo" /> {artist.name}
-        </div>
-        <div className="song">
-          <img src={musicNote} className="app-icon" alt="logo" /> {title}
-        </div>
+        </p>
+        <p className="value-description">
+          <img src={musicNote} className="app-icon" alt="logo" /> {title.substring(0,50)}
+        </p>
       </div>
-      <button type="button" className="btn btn-sm" onClick= {() => onSuggestionClick(data)}>
+      <button type="button" className="btn btn-sm item" onClick= {() => onSuggestionClick(data)}>
         Get Lyrics
       </button>
       {/* <div>
