@@ -6,17 +6,18 @@ import LyricsSection from "./components/LyricsSection/LyricsSection";
 
 import "./App.css";
 
-
 function App() {
   const [input, setInput] = React.useState("");
   const [selectedSong, setSelectedSong] = React.useState({});
   let heroSectionClass =
-    input && input.length ? "hero-section container  small" : "hero-section container large";
+    input && input.length
+      ? "hero-section container  small"
+      : "hero-section container large";
 
   return (
     <div className="container">
       <div className={heroSectionClass}>
-      <h1 className="section-heading app-header">Oh My Lyrics</h1>
+        <h1 className="section-heading app-header">Oh My Lyrics</h1>
         <p className="section-description">
           Never forget the lyrics to your favorite songs again...
         </p>
@@ -28,14 +29,20 @@ function App() {
           value={input}
           onSearchChange={setInput}
         />
-        {!selectedSong.id && (
+        {!selectedSong.id && input && input.length && (
           <SuggestionList input={input} setSelectedSong={setSelectedSong} />
         )}
       </div>
-      <LyricsSection
-        selectedSong={selectedSong}
-        setSelectedSong={setSelectedSong}
-      />
+      {selectedSong &&
+        selectedSong.title &&
+        selectedSong.artist &&
+        selectedSong.artist.name && (
+          <LyricsSection
+            selectedSong={selectedSong}
+            key={selectedSong.title}
+            setSelectedSong={setSelectedSong}
+          />
+        )}
     </div>
   );
 }

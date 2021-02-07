@@ -1,30 +1,22 @@
 import SearchSuggestion from "../SearchSuggestion/SearchSuggestion";
-import Fetch from "../Fetch/Fetch";
+import useFetch from "../../utils/useFetch";
 
 function SuggestionList({ input, setSelectedSong }) {
-    if (input && input.length) {
+    const [response, loading, hasError] = useFetch(`https://api.lyrics.ovh/suggest/${input}`)
+
       return (
-        <Fetch url={`https://api.lyrics.ovh/suggest/${input}`}>
-          {data => {
-            if (data && !data.data) {
-              return <h4>Loading...</h4>;
-            }
-            if (data && data.data && data.data.length === 0) {
-              return <h4>loading...</h4>;
-            }
-            return data.data.map(item => (
+          <>
+          {loading ? <div>Loading...</div> : (hasError ? <div>An Error occurred, Please try again later.</div> :
+            response && response.data.map(item => (
               <SearchSuggestion
                 data={item}
                 key={item.id}
                 onSuggestionClick={setSelectedSong}
               />
-            ));
-          }}
-        </Fetch>
+              )))}
+          </>
       );
-    } else {
-      return <></>;
-    }
+    
   }
 
   export default SuggestionList;
