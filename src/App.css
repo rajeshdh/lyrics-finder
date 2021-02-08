@@ -137,6 +137,9 @@ body {
 .value-description {
   opacity: .8;
   margin:0 auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* Bigger than 550 */
@@ -154,6 +157,7 @@ body {
   .value-description {
     font-size: 12px;
   }
+  
 }
 /* Bigger than 750 */
 @media (min-width: 750px) {
