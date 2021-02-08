@@ -3,6 +3,7 @@ import React from "react";
 import SearchInput from "./components/SearchInput/SearchInput";
 import SuggestionList from "./components/SuggestionList/SuggestionList";
 import LyricsSection from "./components/LyricsSection/LyricsSection";
+import musicNote from "./images/music-note.png";
 
 import "./App.css";
 
@@ -15,7 +16,18 @@ function App() {
       : "hero-section container large";
 
   return (
+    <>
+    <div className="nav">
+        <div className="home">
+       
+        <a href="/"> <img src={musicNote} className="app-icon" alt="oh my lyrics logo" /></a>
+        </div>
+        <div className="github">
+          <a href="https://github.com/pesto-students/lyrics-finder-rajeshdh/">Github</a>
+        </div>
+      </div>
     <div className="container">
+      
       <div className={heroSectionClass}>
         <h1 className="section-heading app-header">Oh My Lyrics</h1>
         <p className="section-description">
@@ -44,6 +56,7 @@ function App() {
           />
         )}
     </div>
+    </>
   );
 }
 

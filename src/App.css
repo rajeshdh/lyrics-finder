@@ -2,6 +2,25 @@ body {
   background-color: #ffcc5b;
   color: #202021;
 }
+.nav {
+  display: flex;
+  justify-content: space-around;
+  text-transform: uppercase;
+  padding: 0 20px;
+  /* border-bottom: 5px solid black; */
+}
+.nav a {
+  color: #202021;
+  /* text-decoration: none; */
+}
+.nav a:hover {
+  color:gray;
+  text-decoration: underline;
+}
+
+.nav .github {
+  margin-left: auto;
+}
 
 .hero-section {
   display: flex;
