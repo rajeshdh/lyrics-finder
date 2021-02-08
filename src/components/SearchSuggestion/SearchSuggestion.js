@@ -5,7 +5,7 @@ function searchSuggestion({ data, onSuggestionClick }) {
   const { album, artist, title } = data;
   return (
     <div className="search-suggestion">
-      <img src={album.cover_medium} className="image" alt="album cover image" />
+      <img src={album.cover_medium} className="image" alt="album cover" />
 
       <div className="artist-song item">
         <p className="value-description">
