@@ -16,7 +16,7 @@ function useFetch(url, opts) {
         setHasError(true);
         setLoading(false);
       });
-  }, [url]);
+  }, [url, opts]);
   return [response, loading, hasError];
 }
 
