@@ -5,14 +5,14 @@ function searchSuggestion({ data, onSuggestionClick }) {
   const { album, artist, title } = data;
   return (
     <div className="search-suggestion">
-      <img src={album.cover_medium} className="image" alt="logo" />
+      <img src={album.cover_medium} className="image" alt="album cover image" />
 
       <div className="artist-song item">
         <p className="value-description">
-          <img src={user} className="app-icon" alt="logo" /> {artist.name}
+          <img src={user} className="app-icon" alt="artist" /> {artist.name}
         </p>
         <p className="value-description">
-          <img src={musicNote} className="app-icon" alt="logo" /> {title.substring(0,50)}
+          <img src={musicNote} className="app-icon" alt="song title" /> {title.substring(0,50)}
         </p>
       </div>
       <button type="button" className="btn btn-sm item" onClick= {() => onSuggestionClick(data)}>
