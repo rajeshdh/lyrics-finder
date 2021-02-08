@@ -142,14 +142,7 @@ body {
   text-overflow: ellipsis;
 }
 
-/* Bigger than 550 */
-@media (min-width: 550px) {
-  .app-icon {
-    width: 25px;
-    height: 25px;
-  }
-}
-
+/* mobiles - small screens */
 @media (max-width: 400px) {
   .container{
     padding: 0 5px;
@@ -157,8 +150,38 @@ body {
   .value-description {
     font-size: 12px;
   }
+  .artist-song {
+    max-width: 100px;
+  }
+
   
 }
+
+/* Bigger than 400 */
+@media (min-width: 400px) {
+  .container{
+    padding: 0 5px;
+  }
+  .value-description {
+    font-size: 12px;
+  }
+  .artist-song {
+    max-width: 110px;
+  }
+}
+
+/* Bigger than 550 */
+@media (min-width: 550px) {
+  .app-icon {
+    width: 25px;
+    height: 25px;
+  }
+  .artist-song {
+    max-width: 130px;
+  }
+}
+
+
 /* Bigger than 750 */
 @media (min-width: 750px) {
   .section-description {
@@ -166,5 +189,14 @@ body {
     margin-left: auto;
     margin-right: auto;
   }
+  .artist-song {
+    max-width: 200px;
+  }
 
+}
+/* Larger than desktop */
+@media (min-width: 1000px) {
+  .artist-song {
+    max-width: 350px;
+  }
 }
